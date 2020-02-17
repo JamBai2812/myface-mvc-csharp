@@ -43,6 +43,7 @@ namespace MyFace.Repositories
             _context.Posts.Add(new Post
             {
                 ImageUrl = postModel.ImageUrl,
+                ImageAlt = postModel.ImageAlt,
                 Message = postModel.Message,
                 PostedAt = DateTime.Now,
                 User = postedBy,

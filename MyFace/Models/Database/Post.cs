@@ -12,6 +12,7 @@ namespace MyFace.Models.Database
         public int Id { get; set; }
         public string Message { get; set; }
         public string ImageUrl { get; set; }
+        public string ImageAlt { get; set; }
         public DateTime PostedAt { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }

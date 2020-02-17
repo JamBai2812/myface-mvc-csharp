@@ -5,5 +5,6 @@
         public string Message { get; set; }
         public string ImageUrl { get; set; }
         public int UserId { get; set; }
-    }
-}
+        
+        public string ImageAlt { get; set; }
+    } }

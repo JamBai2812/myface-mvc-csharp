@@ -44,7 +44,7 @@ namespace MyFace.Models.View
         public string Message => _post.Message;
         public string ImageUrl => _post.ImageUrl;
         public DateTime PostedAt => _post.PostedAt;
-        
+        public string ImageAlt => _post.ImageAlt;
         public PostUserViewModel PostedBy { get; }
         public IEnumerable<PostUserViewModel> LikedBy { get; }
         public IEnumerable<PostUserViewModel> DislikedBy { get; }

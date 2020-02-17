@@ -58,7 +58,7 @@ namespace MyFace
             {
                 new Post
                 {
-                    Message = "Multi-tiered fault-tolerant flexibility",
+                    Message = "I love my dog",
                     ImageUrl = "https://i.picsum.photos/id/300/1280/960.jpg",
                     PostedAt = DateTime.Now,
                     UserId = 5
@@ -88,6 +88,7 @@ namespace MyFace
                 {
                     Message = "Persevering maximized model",
                     ImageUrl = "https://i.picsum.photos/id/304/1280/960.jpg",
+                    ImageAlt = "Hand on Music adjuster",
                     PostedAt = DateTime.Now,
                     UserId = 5
                 },
