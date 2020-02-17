@@ -50,7 +50,7 @@
 
             foreach (var post in Model.Posts)
             {
-                <img height="250" width="300" src="@post.ImageUrl" alt="dogs">
+                <img height="250" width="300" src="@post.ImageUrl">
                 <h2>@post.PostedBy.FirstName</h2>
                 <p> @post.Message</p>
                 <p>@post.PostedAt.ToShortTimeString()</p>

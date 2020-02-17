@@ -1,20 +1,26 @@
-﻿@using MyFace.Models.Request
+﻿@using System.Net.Mime
+@using MyFace.Models.Database
+@using MyFace.Models.Request
 @{
     Layout = "_Layout";
 
     var postRequest = new CreatePostRequestModel();
+
     
-    //postRequest.Message = 
     
-    // <header><h1>Create Post</h1></header>
-    // <form>
-    //     <label for="Message">Enter Message:</label>
-    //     <textarea id="Message" rows="4" cols="50"></textarea>
-    //     <label for="ImgURL">Enter Image URL:</label>
-    //     <input type="text">
-    //     <label for="UserId">Enter User ID:</label>
-    //     <input type="text">
-    //     <button type="button">Submit new post</button>
-    // </form>
-    //
+    <header><h1>Create Post</h1></header>
+    <form asp-controller="Posts" asp-action="CreatePost" method="post">
+     
+         <label for="Message">Enter Message:</label>
+         <textarea name="Message" id="Message" rows="4" cols="50"></textarea>
+         
+         <label for="ImgURL">Enter Image URL:</label>
+         <input name="ImageUrl" type="text" id="ImgURL">
+         
+         <label for="UserId">Enter User ID:</label>
+         <input name="UserId" type="text" id="UserId">
+         
+         <button type="submit">Submit new post</button>
+     </form>
+    
 }

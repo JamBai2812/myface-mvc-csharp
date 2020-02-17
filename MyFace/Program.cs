@@ -80,7 +80,7 @@ namespace MyFace
                 new Post
                 {
                     Message = "Operative optimal conglomeration",
-                    ImageUrl = "https://i.picsum.photos/id/303/1280/960.jpg",
+                    ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/f/f0/Mops_oct09_cropped2.jpg",
                     PostedAt = DateTime.Now,
                     UserId = 5
                 },
