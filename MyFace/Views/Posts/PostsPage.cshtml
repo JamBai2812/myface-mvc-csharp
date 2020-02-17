@@ -17,54 +17,58 @@
         <h1>Posts</h1>
     </header>
     <main>
-    @{
-        User user1 = new User();
-        user1.FirstName = "John";
-        User user2 = new User();
-        user2.FirstName = "Sam";
-        User user3 = new User();
-        user3.FirstName = "Alison";
+        @{
+            User user1 = new User();
+            user1.FirstName = "John";
+            User user2 = new User();
+            user2.FirstName = "Sam";
+            User user3 = new User();
+            user3.FirstName = "Alison";
+            //current date time - date time of post
 
-        Post post1 = new Post();
-        post1.Message = "Check out my sick dog";
-        post1.ImageUrl = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/portrait-of-a-pug-dog-with-big-sad-eyes-isolated-anna-cinaroglu.jpg";
-        
-        post1.PostedBy = user1;
-        //user 1 message
-        
-        Post post2 = new Post();
-        post2.Message = "Buddy looking like a cutie pie";
-        post2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/9/93/Golden_Retriever_Carlos_%2810581910556%29.jpg";
-        post2.PostedBy = user2;
-        //user 2 message
-        
-        Post post3 = new Post();
-        post3.Message = "Is my dog thinking about me. #cute";
-        post3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Deutscher_Sch%C3%A4ferhund-_portrait.JPG/240px-Deutscher_Sch%C3%A4ferhund-_portrait.JPG";
-        post3.PostedBy = user3;
-        //user 3 message
-        
-        List<Post> postList = new List<Post>();
-        postList.Add(post1);
-        postList.Add(post2);
-        postList.Add(post3);
+            Post post1 = new Post();
+            post1.Message = "Check out my sick dog";
+            post1.ImageUrl = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/portrait-of-a-pug-dog-with-big-sad-eyes-isolated-anna-cinaroglu.jpg";
+            post1.PostedAt = DateTime.Now;
+            post1.PostedBy = user1;
+            //user 1 message
 
-        PostsViewModel postViewModel = new PostsViewModel(postList);
+            Post post2 = new Post();
+            post2.Message = "Buddy looking like a cutie pie";
+            post2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/9/93/Golden_Retriever_Carlos_%2810581910556%29.jpg";
+            post2.PostedAt = DateTime.Now;
+            post2.PostedBy = user2;
+            //user 2 message
 
-        foreach (var post in postViewModel.Posts)
-        {
-            <img height="250" width="300" src="@post.ImageUrl" alt="dogs">
-            <h2>@post.PostedBy.FirstName</h2>
-            <p> @post.Message</p>
+            Post post3 = new Post();
+            post3.Message = "Is my dog thinking about me. #cute";
+            post3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Deutscher_Sch%C3%A4ferhund-_portrait.JPG/240px-Deutscher_Sch%C3%A4ferhund-_portrait.JPG";
+            post3.PostedAt = DateTime.Now;
+            post3.PostedBy = user3;
+            //user 3 message
 
+            List<Post> postList = new List<Post>();
+            postList.Add(post1);
+            postList.Add(post2);
+            postList.Add(post3);
+
+            PostsViewModel postViewModel = new PostsViewModel(postList);
+
+            foreach (var post in postViewModel.Posts)
+            {
+                <img height="250" width="300" src="@post.ImageUrl" alt="dogs">
+                <h2>@post.PostedBy.FirstName</h2>
+                <p> @post.Message</p>
+                <p>@post.PostedAt.ToLongDateString()</p>
+                <hr>
+            }
         }
-    }
-    
-    
-       
-        
-        
-        
+
+
+
+
+
+
 
     </main>
     <footer>
