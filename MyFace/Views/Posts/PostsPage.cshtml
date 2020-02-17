@@ -1,5 +1,70 @@
-﻿@model MyFace.Models.View.PostsViewModel
+﻿@using MyFace.Models.Database
+@using MyFace.Models.View
+@model MyFace.Models.View.PostsViewModel
 
 @{
     Layout = "_Layout";
+
+    <html>
+    <head>
+        <title>MyFace - All Posts</title>
+
+
+    </head>
+    <body>
+
+    <header>
+        <h1>Posts</h1>
+    </header>
+    <main>
+    @{
+        User user1 = new User();
+        user1.FirstName = "John";
+        User user2 = new User();
+        user2.FirstName = "Sam";
+        User user3 = new User();
+        user3.FirstName = "Alison";
+
+        Post post1 = new Post();
+        post1.Message = "Hello";
+        post1.PostedBy = user1;
+        Post post2 = new Post();
+        post2.Message = "Hello again";
+        post2.PostedBy = user2;
+        Post post3 = new Post();
+        post3.Message = "Hello again again";
+        post3.PostedBy = user3;
+
+        List<Post> postList = new List<Post>();
+        postList.Add(post1);
+        postList.Add(post2);
+        postList.Add(post3);
+
+        PostsViewModel postViewModel = new PostsViewModel(postList);
+
+        foreach (var post in postViewModel.Posts)
+        {
+            <h2>@post.PostedBy.FirstName</h2>
+            <p>@post.PostedBy.FirstName says: @post.Message</p>
+
+        }
+    }
+    
+    
+       
+        
+        
+        
+
+    </main>
+    <footer>
+
+
+    </footer>
+
+    </body>
+
+
+    </html>
+
 }
