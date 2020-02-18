@@ -8,11 +8,11 @@
         <h1>Posts</h1>
     </header>
     <main>
-        <div class="pageContent">
+        <ol class="pageContent">
             @{
                 foreach (var post in Model.Posts)
                 {
-                    <div class="post">
+                    <li class="post">
                         <img class="userImage" height="100" width="100" src="@post.ProfileImageUrl">
                         <h2>@post.PostedBy.FirstName</h2>
                         <div class="postContainer">
@@ -22,9 +22,9 @@
                             <p>On @post.PostedAt.ToLongDateString()</p>
                         </div>
                         <hr>
-                    </div>
+                    </li>
                 }
             }
-        </div>
+        </ol>
     </main>
 }
