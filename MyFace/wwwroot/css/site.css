@@ -4,7 +4,7 @@ body {
 
 nav {
     padding: 10px 16px;
-    background-color: #349ee0;
+    background-color: #003366;
 }
 
 a.navbar-brand {
@@ -22,6 +22,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #003366;
 }
 
 li {
@@ -38,11 +39,15 @@ li a {
 }
 
 li a:hover{
-    background-color: black;
+    background-color: #99adc1;
 }
 
 h1 {
     text-align: center;
+    padding: 75px;
+    font-size: 3em;
+    color: white;
+    background-color: #003366;
 }
 
 .post {
