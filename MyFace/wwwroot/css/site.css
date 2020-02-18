@@ -10,7 +10,7 @@ nav {
 a.navbar-brand {
     font-family: 'Squada One', cursive;
     float: left;
-    padding: 1px; 
+    padding: 1px;
     overflow: hidden;
     text-decoration: none;
     color: white;
@@ -38,8 +38,9 @@ li a {
     text-decoration: none;
 }
 
-li a:hover{
-    background-color: #99adc1;
+li a:hover {
+    text-decoration: underline;
+    color: #fff;
 }
 
 h1 {
@@ -58,11 +59,19 @@ img.userImage {
     border-radius: 50%;
 }
 
-main{
+main {
     text-align: center;
 }
 
-.postContainer{
+.postContainer {
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 400px) {
+    h1 {
+        padding: 38px;
+        font-size: 2em;
+    }
+}
+    
