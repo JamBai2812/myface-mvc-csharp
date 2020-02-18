@@ -11,14 +11,21 @@
     <header><h1>Create Post</h1></header>
     <form asp-controller="Posts" asp-action="CreatePost" method="post">
      
-         <label for="Message">Enter Message:</label>
-         <textarea name="Message" id="Message" rows="4" cols="50"></textarea>
+        <label for="Message">What would you like to say?</label>
+        <br>
+        <textarea name="Message" id="Message"></textarea>
+        <br>
+        
          
-         <label for="ImgURL">Enter Image URL:</label>
-         <input name="ImageUrl" type="text" id="ImgURL">
+        <label for="ImgURL">Enter Image URL:</label>
+        <br>
+        <input name="ImageUrl" type="text" id="ImgURL">
+        <br>
          
-         <label for="UserId">Enter User ID:</label>
-         <input name="UserId" type="text" id="UserId">
+        <label for="UserId">Enter User ID:</label>
+        <br>
+        <input name="UserId" type="text" id="UserId">
+        <br>
          
          <button type="submit">Submit new post</button>
      </form>
