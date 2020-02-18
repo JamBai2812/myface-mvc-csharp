@@ -45,8 +45,9 @@ li a:hover {
 
 h1 {
     text-align: center;
-    padding: 75px;
-    font-size: 3em;
+    
+    padding: 38px;
+    font-size: 2em;
     color: white;
     background-color: #003366;
 }
@@ -68,10 +69,42 @@ main {
     flex-direction: column;
 }
 
-@media (max-width: 400px) {
+div.container {
+    
+}
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+}
+
+a.footerLink {
+     text-decoration: none;
+     color: #fff;
+     float: right;
+ }
+
+a.footerLink:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+@media (min-width: 500px) {
     h1 {
-        padding: 38px;
-        font-size: 2em;
+        padding: 75px;
+        font-size: 3em; 
     }
 }
+
+@media (min-width: 1600px) {
+   .pageContent{
+       width: 80%;
+       display: inline-block;
+   }
+}
+
+
+
+
+
     
