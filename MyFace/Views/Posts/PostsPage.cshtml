@@ -50,11 +50,11 @@
 
             foreach (var post in Model.Posts)
             {
-                <img height="250" width="300" src="@post.ImageUrl" alt="@post.ImageAlt">
                 <h2>@post.PostedBy.FirstName</h2>
+                <img height="250" width="300" src="@post.ImageUrl" alt="@post.ImageAlt">
                 <p> @post.Message</p>
-                <p>@post.PostedAt.ToShortTimeString()</p>
-                <p>@post.PostedAt.ToLongDateString()</p>
+                <p>Posted at @post.PostedAt.ToShortTimeString()</p>
+                <p>On @post.PostedAt.ToLongDateString()</p>
                 <hr>
             }
         }
