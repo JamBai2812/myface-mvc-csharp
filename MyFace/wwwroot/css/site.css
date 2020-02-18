@@ -40,3 +40,24 @@ li a {
 li a:hover{
     background-color: black;
 }
+
+h1 {
+    text-align: center;
+}
+
+.post {
+    display: inline-block;
+}
+
+img.userImage {
+    border-radius: 50%;
+}
+
+main{
+    text-align: center;
+}
+
+.postContainer{
+    display: flex;
+    flex-direction: column;
+}
