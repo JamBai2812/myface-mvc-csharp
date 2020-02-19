@@ -5,25 +5,36 @@
 @{
     Layout = "_Layout";
     <header>
-        <h1 id="#tester">Posts</h1>
+        <h1>News Feed</h1>
     </header>
     <main>
         
         <ul class="pageContent">
             @{
+                
+                
                 foreach (var post in Model.Posts)
                 {
                     <li class="post @post.Message">
                         <img class="userImage" height="100" width="100" src="@post.ProfileImageUrl">
-                        <h2>@post.PostedBy.FirstName</h2>
+                        <h2 class="firstName">@post.PostedBy.FirstName</h2>
+                        
+                        <div class="modal tester">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>I'm tired</p>
+                            </div>
+                        </div>
+                        
+                        
                         <div class="postContainer">
                             <p> @post.Message</p>
                             <img height="250" width="300" src="@post.ImageUrl" alt="@post.ImageAlt">
-                            <button class="myBtn">Create New Post</button>
+                            <a asp-controller="Posts" asp-action="CreatePostPage" class="myBtn">Create New Post</a>
                             <p>Posted at @post.PostedAt.ToShortTimeString()</p>
                             <p>On @post.PostedAt.ToLongDateString()</p>
                         </div>
-                        <hr>
+                        <hr class="postSeparator">
                     </li>
                 }
             }
