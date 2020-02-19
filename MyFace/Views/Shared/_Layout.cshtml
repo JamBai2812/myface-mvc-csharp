@@ -34,11 +34,31 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Enter New Post</p>
-                
+                <form asp-controller="Posts" asp-action="CreatePost" method="post">
+
+                    <div class="userInputSection">
+                        <label for="Message">What would you like to say?</label>
+                        <br>
+                        <textarea name="Message" id="Message"></textarea>
+                        <br>
+                    </div>
+                    <div class="userInputSection">
+                        <label for="ImgURL">Enter Image URL:</label>
+                        <br>
+                        <input name="ImageUrl" type="text" id="ImgURL">
+                        <br>
+                    </div>
+                    <div class="userInputSection">
+                        <label for="UserId">Enter User ID:</label>
+                        <br>
+                        <input name="UserId" type="text" id="UserId">
+                        <br>
+                    </div>
+                    <button class="submit" type="submit">Submit new post</button>
+                </form>
             </div>
         </div>
-        
+
         @RenderBody()
     </main>
 </div>
