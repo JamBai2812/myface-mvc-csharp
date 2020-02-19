@@ -153,6 +153,12 @@ a.footerLink:hover {
     cursor: pointer;
 }
 
+.myBtn{
+    color:orange;
+    background-color: purple;
+    font-size: 20px;
+}
+
 
 /*@media(min-width: ){
     !*change ul in navbar into a hamburger to store all li *!

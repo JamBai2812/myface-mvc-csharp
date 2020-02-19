@@ -8,6 +8,7 @@
         <h1 id="#tester">Posts</h1>
     </header>
     <main>
+        
         <ul class="pageContent">
             @{
                 foreach (var post in Model.Posts)
@@ -18,7 +19,7 @@
                         <div class="postContainer">
                             <p> @post.Message</p>
                             <img height="250" width="300" src="@post.ImageUrl" alt="@post.ImageAlt">
-                            <button id="myBtn">Create New Post</button>
+                            <button class="myBtn">Create New Post</button>
                             <p>Posted at @post.PostedAt.ToShortTimeString()</p>
                             <p>On @post.PostedAt.ToLongDateString()</p>
                         </div>
@@ -29,3 +30,7 @@
         </ul>
     </main>
 }
+
+@section Scripts{
+}
+

@@ -1,12 +1,15 @@
 let modal = document.getElementById("myModal");
 
-let btn = document.getElementById("myBtn");
+let btns = document.getElementsByClassName("myBtn"), i , len;
 
 let span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-    modal.style.display = "block";
-};
+
+for (i = 0, len = btns.length; i < len; i++) {
+    btns[i].onclick = function(){
+        modal.style.display = "block";
+    }
+}
 
 span.onclick = function () {
  modal.style.display = "none";
