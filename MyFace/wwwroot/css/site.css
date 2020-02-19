@@ -8,15 +8,20 @@ nav {
     background-color: #003366;
 }
 
+.container {
+    display: flex; 
+    justify-content: space-between;
+}
+
 a.navbar-brand {
     font-family: 'Squada One', cursive;
-    float: left;
     padding: 1px;
-    overflow: hidden;
     text-decoration: none;
     color: white;
     font-size: 27px;
+    align-self: center;
 }
+
 
 ul.pageContent {
     list-style: none;
@@ -28,6 +33,7 @@ ul.pageContent {
 .nav-item {
     float: right;
     font-size: 12px;
+    list-style: none;
 }
 
 .nav-link {
@@ -109,10 +115,6 @@ a.footerLink:hover {
     color: #fff;
 }
 
-/*ol.pageContent{*/
-/*    padding-inline-start: 0;*/
-/*    background-color: brown;*/
-/*}*/
 
 /*@media(min-width: ){
     !*change ul in navbar into a hamburger to store all li *!
@@ -135,7 +137,7 @@ a.footerLink:hover {
     }
 }
 
-@media (min-width: 1570px) {
+@media (min-width: 1500px) {
    .pageContent{
        width: 1370px;
        display: inline-block;
