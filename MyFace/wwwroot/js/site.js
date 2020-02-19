@@ -1,17 +1,19 @@
-/*
-window.addEventListener("load", function() {
-    console.log("Hello TechSwitch!");
-    let elements = document.getElementsByTagName("p"), i, len;
-    
-    for (i = 0, len = elements.length; i < len; i++) {
-        elements[i].style.color = 'red';
-    }
-});*/
+let modal = document.getElementById("myModal");
 
-window.onclick = function(){
-    let button = document.getElementById("#tester");
-    button.remove();
+let btn = document.getElementById("myBtn");
+
+let span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
 };
 
+span.onclick = function () {
+ modal.style.display = "none";
+};
 
-
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};

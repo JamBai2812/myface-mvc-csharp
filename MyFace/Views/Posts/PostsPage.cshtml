@@ -12,12 +12,13 @@
             @{
                 foreach (var post in Model.Posts)
                 {
-                    <li class="post">
+                    <li class="post @post.Message">
                         <img class="userImage" height="100" width="100" src="@post.ProfileImageUrl">
                         <h2>@post.PostedBy.FirstName</h2>
                         <div class="postContainer">
                             <p> @post.Message</p>
                             <img height="250" width="300" src="@post.ImageUrl" alt="@post.ImageAlt">
+                            <button id="myBtn">Create New Post</button>
                             <p>Posted at @post.PostedAt.ToShortTimeString()</p>
                             <p>On @post.PostedAt.ToLongDateString()</p>
                         </div>
