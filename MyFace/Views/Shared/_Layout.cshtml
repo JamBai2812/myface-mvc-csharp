@@ -9,25 +9,27 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container postContainer">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyFace</a>
+    <nav class="navbar container header">
+        <input class="menu-btn" type="checkbox" id="menu-btn"/>
+        <label class="menu-icon" for="menu-btn">
+            <span class="navicon"></span>
+        </label>
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyFace</a>
 
-            <ul class="navbar-nav flex-grow-1 menu">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="PostsPage">Posts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="UsersPage">Users</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="CreatePostPage">Create</a>
-                </li>
-            </ul>
-        </div>
+        <ul class="navbar-nav flex-grow-1 menu">
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="PostsPage">Posts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="UsersPage">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="CreatePostPage">Create</a>
+            </li>
+        </ul>
     </nav>
 </header>
 <div class="postContainer">

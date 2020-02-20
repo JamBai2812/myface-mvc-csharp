@@ -9,27 +9,34 @@ nav {
     padding: 10px 16px;
     background-color: #003366;
     position: fixed;
-    top:0;
-    width:100%;
+    top: 0;
+    width: 100%;
 }
 
 .container {
-    display: flex; 
-    justify-content: space-between;
+    /*display: flex;
+    /*justify-content: space-between;*/
     padding-left: 20px;
+}
+
+.navbar.container.header{
+    display:flex;
+    justify-content: space-between;
 }
 
 a.navbar-brand {
     font-family: 'Squada One', cursive;
-    padding: 1px;
+    padding-top: 15px;
     text-decoration: none;
     color: white;
     font-size: 27px;
-    align-self: center;
+    justify-self: center;
+    order: -1;
 }
 
-ul.navbar-nav.flex-grow-1{
-    padding-right:30px;
+ul.navbar-nav.flex-grow-1 {
+    padding-right: 30px;
+    align-self: flex-end;
 }
 
 
@@ -61,27 +68,96 @@ ul.pageContent {
 
 /*Hamburger code here:*/
 
+.header {
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+} 
+
+.header li a {
+    display: block;
+    text-decoration: none;
+}
+.header .menu {
+    background-color: #003366;
+    clear: both;
+    max-height: 0;
+    transition: max-height .4s ease-in;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    /*float: right;*/
+    padding: 28px 44px;
+    position: relative;
+    user-select: none;
+    order: 1;
+    justify-self: flex-end;
+}
+
+.header .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 50px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Hamburger code ends*/
 
 h1 {
     text-align: center;
@@ -109,14 +185,15 @@ main {
     flex-direction: column;
 }
 
-.postSeparator{
+.postSeparator {
 }
 
-input{
+input {
     margin: 0px;
     border-radius: 4px;
     border: 2px solid black;
 }
+
 textarea#Message {
     margin: 0px;
     width: 274px;
@@ -125,12 +202,12 @@ textarea#Message {
     border: 2px solid black;
 }
 
-.submit{
+.submit {
     padding: 4px;
     margin: 10px;
 }
 
-.userInputSection{
+.userInputSection {
     padding: 5px;
     margin: 2px;
 }
@@ -139,18 +216,18 @@ footer {
     background-color: #003366;
     color: white;
     padding: 10px 0 10px 0;
-    position:fixed;
-    left:0;
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
 }
 
 a.footerLink {
-     text-decoration: none;
-     color: #fff;
-     float: right;
-    padding-right:20px;
- }
+    text-decoration: none;
+    color: #fff;
+    float: right;
+    padding-right: 20px;
+}
 
 a.footerLink:hover {
     text-decoration: underline;
@@ -167,8 +244,8 @@ a.footerLink:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -195,8 +272,8 @@ a.footerLink:hover {
     cursor: pointer;
 }
 
-.myBtn{
-    color:white;
+.myBtn {
+    color: white;
     background-color: #003366;
     font-size: 20px;
     text-decoration: none;
@@ -211,7 +288,7 @@ a.footerLink:hover {
 @media (min-width: 500px) {
     h1 {
         padding: 75px;
-        font-size: 3em; 
+        font-size: 3em;
     }
 
     .nav-link {
@@ -219,16 +296,37 @@ a.footerLink:hover {
         font-size: 16px;
     }
 
-    input{
+    input {
         width: 300px;
     }
 }
+@media (min-width: 768px){
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+    
+
 
 @media (min-width: 1500px) {
-   .pageContent{
-       width: 1370px;
-       display: inline-block;
-   }
+    .pageContent {
+        width: 1370px;
+        display: inline-block;
+    }
 }
 
 
