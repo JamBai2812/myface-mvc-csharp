@@ -292,7 +292,7 @@ a.footerLink:hover {
 @media (min-width: 500px) {
     h1 {
         padding: 75px;
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     .nav-link {
@@ -353,6 +353,11 @@ a.footerLink:hover {
     .pageContent {
         width: 1370px;
         display: inline-block;
+    }
+
+    a.navbar-brand {
+        font-size: 47px;
+        padding-top: 4px;
     }
 }
 
