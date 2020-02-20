@@ -216,7 +216,6 @@ footer {
     background-color: #003366;
     color: white;
     padding: 10px 0 10px 0;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -317,6 +316,16 @@ a.footerLink:hover {
 
     .header .menu-icon {
         display: none;
+    }
+
+    footer {
+        background-color: #003366;
+        color: white;
+        padding: 10px 0 10px 0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
     }
 }
     
