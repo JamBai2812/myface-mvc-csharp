@@ -1,16 +1,22 @@
 body {
     font-family: sans-serif;
-    margin: 0;
+    margin: 0 auto;
+    height: 100%;
+    padding-bottom: 60px;
 }
 
 nav {
     padding: 10px 16px;
     background-color: #003366;
+    position: fixed;
+    top:0;
+    width:100%;
 }
 
 .container {
     display: flex; 
     justify-content: space-between;
+    padding-left: 20px;
 }
 
 a.navbar-brand {
@@ -20,6 +26,10 @@ a.navbar-brand {
     color: white;
     font-size: 27px;
     align-self: center;
+}
+
+ul.navbar-nav.flex-grow-1{
+    padding-right:30px;
 }
 
 
@@ -51,7 +61,7 @@ ul.pageContent {
 
 h1 {
     text-align: center;
-    
+    margin-top: 120px;
     padding: 38px;
     font-size: 2em;
     color: white;
@@ -104,13 +114,18 @@ textarea#Message {
 footer {
     background-color: #003366;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 0 10px 0;
+    position:fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
 }
 
 a.footerLink {
      text-decoration: none;
      color: #fff;
      float: right;
+    padding-right:20px;
  }
 
 a.footerLink:hover {
@@ -157,9 +172,10 @@ a.footerLink:hover {
 }
 
 .myBtn{
-    color:orange;
-    background-color: purple;
+    color:white;
+    background-color: #003366;
     font-size: 20px;
+    text-decoration: none;
 }
 
 

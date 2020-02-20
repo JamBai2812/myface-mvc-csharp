@@ -16,6 +16,9 @@
 // document.addEventListener("click", deletePost);
 
 
+
+//Modal popup for Creating post
+
 let modal = document.getElementById("myModal");
 
 let btns = document.getElementsByClassName("myBtn"), i, len;
@@ -50,33 +53,35 @@ window.onclick = function (event) {
 //     }
 // }
 
-window.onload = function(){
-    let userModals = document.querySelectorAll(".modal,.tester");
+//Creating modal popups for individual users.
 
-    let firstName = document.querySelectorAll(".firstName"), j, y;
-
-    let span2 = document.getElementsByClassName("close")[0];
-
-    for (j = 0, y = userModals.length; j < y; j++) {
-        firstName[j].onclick = function (event) {
-            console.log(event);
-            event.preventDefault();
-            console.log("User Modals:" + userModals[j]);
-            console.log("FirstNames:"+ firstName[j]);
-            /*userModals[j].style.display = "block";*/
-        }
-    }
-
-    span2.onclick = function () {
-        userModals.style.display = "none";
-    };
-
-    window.onclick = function (event) {
-        if (event.target == userModals) {
-            userModals.style.display = "none";
-        }
-    };
-};
+// window.onload = function(){
+//     let userModals = document.querySelectorAll(".modal,.tester");
+//
+//     let firstName = document.querySelectorAll(".firstName"), j, y;
+//
+//     let span2 = document.getElementsByClassName("close")[0];
+//
+//     for (j = 0, y = userModals.length; j < y; j++) {
+//         firstName[j].onclick = function (event) {
+//             console.log(event);
+//             event.preventDefault();
+//             console.log("User Modals:" + userModals[j]);
+//             console.log("FirstNames:"+ firstName[j]);
+//             /*userModals[j].style.display = "block";*/
+//         }
+//     }
+//
+//     span2.onclick = function () {
+//         userModals.style.display = "none";
+//     };
+//
+//     window.onclick = function (event) {
+//         if (event.target == userModals) {
+//             userModals.style.display = "none";
+//         }
+//     };
+// };
 
 
 
