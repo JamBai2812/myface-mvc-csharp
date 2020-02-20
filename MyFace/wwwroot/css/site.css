@@ -283,6 +283,9 @@ a.footerLink:hover {
     border: solid 2px #003366;
 }
 
+li {
+    padding-right: 2px;
+}
 
 /*@media(min-width: ){
     !*change ul in navbar into a hamburger to store all li *!
