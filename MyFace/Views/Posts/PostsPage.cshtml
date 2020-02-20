@@ -10,27 +10,29 @@
     <main>
         
         <ul class="pageContent">
+            <a asp-controller="Posts" asp-action="CreatePostPage" id="myBtn"> <i class="material-icons">post_add</i></a>
+           
             @{
-                
-                
+
+
                 foreach (var post in Model.Posts)
                 {
                     <li class="post @post.Message">
                         <img class="userImage" height="100" width="100" src="@post.ProfileImageUrl">
                         <h2 class="firstName">@post.PostedBy.FirstName</h2>
-                        
+
                         <div class="modal tester">
                             <div class="modal-content">
                                 <span class="close">&times;</span>
                                 <p>I'm tired</p>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="postContainer">
                             <p> @post.Message</p>
                             <img height="250" width="300" src="@post.ImageUrl" alt="@post.ImageAlt">
-                            <a asp-controller="Posts" asp-action="CreatePostPage" class="myBtn">Create New Post</a>
+
                             <p>Posted at @post.PostedAt.ToShortTimeString()</p>
                             <p>On @post.PostedAt.ToLongDateString()</p>
                         </div>

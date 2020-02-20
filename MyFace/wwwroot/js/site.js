@@ -21,27 +21,26 @@
 
 let modal = document.getElementById("myModal");
 
-let btns = document.getElementsByClassName("myBtn"), i, len;
+let btn = document.getElementById("myBtn");
 
 let span = document.getElementsByClassName("close")[0];
 
-for (i = 0, len = btns.length; i < len; i++) {
-    btns[i].onclick = function (event) {
+    btn.onclick = function (event) {
         console.log(event);
         event.preventDefault();
         modal.style.display = "block";
-    }
-}
 
-span.onclick = function () {
-    modal.style.display = "none";
-};
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    };
 
 
 // let userModals = document.getElementsByClassName("");
